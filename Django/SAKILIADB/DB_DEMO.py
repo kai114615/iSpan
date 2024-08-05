@@ -82,7 +82,7 @@ class Category():
                     cursor.execute(sql, (category_name,))
 
                     # 第三步之二 讀取資料
-                    cursor.commit()
+                    connection.commit()
                     return cursor.rowcount
                 except MySQLdb.MySQLError as e:
                     print(f"資料新增失敗: {e}")
