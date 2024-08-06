@@ -128,7 +128,7 @@ class Category():
 
                     # 第三步之二 讀取資料
                     connection.commit()
-                    return cursor.rowcount
+                    return cursor.rowcount   # rowcount 新增幾筆資料
                 except MySQLdb.MySQLError as e:
                     print(f"資料刪除失敗: {e}")
                     return None
